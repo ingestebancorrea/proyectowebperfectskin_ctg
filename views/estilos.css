@@ -1,0 +1,848 @@
+/*Para que todos los elementos se peguen*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#header{
+    background-color: black;
+    float: left; 
+    width: 100%;
+    height: 5%; 
+}
+
+#opciones{
+    margin: auto;
+    width: 600px;
+    font-family: Arial;
+}
+
+#contenido{
+    float: none; 
+    width: 100%;
+}
+
+
+#titulos{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/*Home*/
+.videolfa{
+  display: inline-block;
+  width: 100%;
+  background-color: #F5B7B1;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.videolf{
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.masajer{
+  display: inline-block;
+  width: 100%;
+  background-color: #F5B7B1;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#separator{
+    float: none; 
+    width: 100%;
+}
+
+#services{
+    float: none; 
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+
+#quienessomos{
+    float: left; 
+    width: 100%;
+}
+
+#v{
+    float: left; 
+    width: 100%;
+    background-color: #F5B7B1;
+}
+
+#m{
+    float: left; 
+    width: 100%;
+    background-color: white;
+}
+
+#login{
+      background-size: 100% 100%;/*Ocupe de ancho y alto el 100 % la imagén*/ 
+      background-repeat: no-repeat;/*Para que no se repita la imagen*/
+}
+
+#inicio{
+    width: 300px;
+    background-color: white;
+    height: 300px;
+    position: fixed;/* Queda fijo en la pantalla "fixed", posiona un elemento pero no lo fija "relative"*/
+    left: 40%;
+    z-index: 1;/* eje z*/
+    top: 30%;/*Arriba o abajo*/
+    border-style: solid;
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;/* Quitar puntos a la lista*/
+}
+
+.nav li a{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 30px 20px;/* Altura, Largo*/  
+    display: block;/* Colocar elementos en bloques*/
+}
+
+.nav > li{
+    float:left;/*Dar forma a nuestro menú*/
+}
+
+.nav li a:hover{
+    background-color: #F5B7B1;
+}
+
+.nav li ul{
+    display:none;/* Esconder elementos*/
+    position:absolute;
+    min-width: 150px;/* Colocar tamaño a la lista*/
+}
+
+.nav li:hover > ul{
+    display: block;
+    z-index: 1;/*Ubicar opciones encima del contenido*/
+}
+
+#formulario{
+    width: 450px;
+    background-color: white;
+    height: 800px;
+    display: flex;/* Queda fijo en la pantalla "fixed", posiona un elemento pero no lo fija "relative"*/
+    justify-content: center;
+    left: 33.5%;
+    z-index: 1;/* eje z*/
+    top: 10%;/*Arriba o abajo*/
+    border-style: solid;
+    border-radius: 5px; 
+    border-color: #F5B7B1;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#contacto{
+    background-color: #F5B7B1; 
+    display: inline-block;
+    width: 100%;
+}
+
+.pformulario{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.circulo{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 100%;/* Ciculo en CSS y HTML*/
+    text-align: center;
+    position: relative;/*indica que la capa sí forma parte del flujo normal de elementos de la página, */
+    left: 20%;
+    /* Efecto sombra*/
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* Servicios*/
+#servicios{
+    float: left;
+    width: 100%;
+    font-family: Arial;
+    display: flex;/*Centrar contenido*/
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;/* Para que no se encuentre tan pegado arriba*/
+    padding-bottom: 60px;
+}
+
+.precio{
+    position: relative;/* Para que el simbolo del dolar se posiciona sobre el div peso*/
+}
+
+.peso_1{
+    color: #fdfe28;
+    position: absolute;
+    left: 50px;
+}
+
+.peso_2{
+    color: #fdfe28;
+    position: absolute;
+    left: 50px;
+}
+
+.peso_3{
+    color: #fdfe28;
+    position: absolute;
+    left: 50px;
+}
+
+.numero{
+    font-size: 50px;
+    color: black;
+}
+
+/*Tabla de Precios*/
+.tabla{
+  background-color: #F5B7B1;
+  padding:30px;/*Aumentar tamaño de la tabla*/
+  
+}
+
+.tabla1{
+    background-color: #F5B7B1;
+    padding:30px;/*Aumentar tamaño de la tabla*/
+    width: 270.141px;
+}
+
+.tabla3{
+  background-color: #F5B7B1;
+  padding:30px;/*Aumentar tamaño de la tabla*/
+  
+}
+   
+.caracteristicas{
+    font-size: 18px;
+}
+   
+#tablados{
+    position: relative;/* Para que este como referencia de los cuadrados superiores e inferiores*/
+    box-shadow: 1px 2px 12px #ccc;/*Sombreado*/
+
+}
+.cuadradosuperior{
+    width: 350px;
+    height: 40px;
+    background-color:#F5B7B1;
+    position: absolute;
+    z-index:0;/*Tridimensionar, colocar debajo de menú de opciones*/
+    top:-38px;
+    left: 0px;
+    box-shadow: -2px -4px 5px #ccc;/*Sombreado*/
+}
+
+.cuadradoinferior{
+    width: 350px;
+    height: 40px;
+    background-color:#F5B7B1;
+    position: absolute;
+    bottom:-38px;
+    left: 0px;
+    box-shadow: -1px 4px 5px #ccc;/*Sombreado*/
+}
+
+.contenidolf{
+    float: left;
+    width: 100%;
+    display: flex;/*Centrar contenido*/
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.overlay{
+  background-color: rgba(0, 0, 0, .3);/*Fondo oscuro*/
+  position: fixed;/*Abarque toda la pantalla*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;/*Centrar cotenido*/
+  align-items: center;/*Centrar elementos*/
+  justify-content: center;
+  visibility: hidden;/*Ocultar overlay y elementos hijos (lo que este dentro de el)*/
+}
+
+.overlay.active{
+  visibility: visible;
+}
+
+.popup{
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0,0,0.3);/*Sombra*/
+  border-radius: 3px;
+  font-family: Arial;
+  /*Hacer ventana más grande*/
+  text-align: center;
+  padding: 30px;
+  width: 600px;
+  transition: 2s ease all;/*Todo los cambios que reciba nuestro elemento van a tener un cambio de estado*/
+  transform: scale(0.7);/*La ventana le estamos cambiando el tamaño*/
+  opacity: 0;/*Ventana oculta*/
+}
+
+.popup h3{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0;
+ 
+}
+
+.popup .btn-cerrar-popup{
+  font-size: 16px;
+  line-height: 16px;
+  display: block;/*Enlace abarque todo el espacio disponible*/
+  text-align: right;/*Enlace posicionar a a la derecha*/
+  transition: .3 ease all;/*Efecto hover*/
+  text-decoration: none;
+  color: black;
+}
+
+.popup .btn-cerrar-popup:hover{
+  color: #F5B7B1;
+}
+
+.popup form .contenedor-inputs{
+  opacity: 0;
+}
+/*input servicios*/
+.popup form .btn-submit{
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40 px;
+  border: none;
+  border-radius: 3px;
+  font-family: Arial;
+  cursor: pointer;
+  color: black;
+  transition: .3 ease all;/*Efecto hover*/
+}
+
+.popup .btn-submit:hover{
+  background: #F5B7B1;
+}
+
+/* Animaciones*/
+.popup.active{
+  opacity: 1;
+  transform: scale(1);/*Tmaño original*/
+}
+.popup.active h3{animation: entradaTitulo 3s ease .5s forwards;}
+.popup.active .contenedor-inputs{animation: entradaInputs 1s ease 1s forwards;}
+
+@keyframes entradaTitulo{
+  from{
+    transform:  translateY(-25px);/*Translate nos permite mover elementos*/
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes entradaInputs{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    transform:  translateY(0);
+    opacity: 1;
+  }
+}
+
+.contenedor-inputs_s{
+  display: inline-block;
+  text-align: left;
+}
+
+.contenedor-inputs_s1{
+  display: inline-block;
+  text-align: left;
+}
+
+.label_s{
+  font-family: Arial;
+  text-align: left;
+}
+
+.label_s1{
+  font-family: Arial;
+  text-align: left;
+}
+
+.input_s{
+  border-color: #F5B7B1;
+  width: 200px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: left;
+}
+
+.input_s1{
+  border-color: #F5B7B1;
+  width: 200px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: left;
+}
+
+/*Experiencia de clientes*/
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);/*Columnas*/
+  grid-template-rows: repeat(2, auto); /*Filas*/
+
+  gap: 5px;/*Tamaño de las divisiones*/
+
+ min-height: 50vh;
+ border: 6px solid white;
+}
+
+.grid-container > .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+.mapa{
+    width: 100%;
+    background-color: #F5B7B1;
+    display: inline-block;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.caja-fija{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+}
+
+
+/*Slider Consejos*/
+.panelcentral{
+display: flex;
+justify-content: center;
+text-align: center;
+width: 100%;
+}
+
+ul.slider{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite;
+}
+
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+
+.slidert1{
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.slidert1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slidert1 input[type="radio"]{
+  position: relative;
+  z-index: 50;
+  margin: 10px;
+}
+
+.slidert1 input[type="radio"]:checked ~ img{
+  opacity: 1;
+}
+
+.slidert2{
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.slidert2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slidert2 input[type="radio"]{
+  position: relative;
+  z-index: 50;
+  margin: 10px;
+}
+
+.slidert2 input[type="radio"]:checked ~ img{
+  opacity: 1;
+}
+
+/*Cliente*/
+.datatable{
+  display: inline-block;
+  justify-content: left;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px;
+  font-family: Arial;
+}
+
+/*Cliente*/
+.tablecliente{
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: #F5B7B1;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.inputcliente{
+  border-style: solid;
+  border-color: #F5B7B1;
+  width: 408px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: center;
+}
+
+.labelcliente{
+  font-family: Arial;
+}
+
+.tablecliente_modificar{
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+/*Agenda, select*/
+.inputagenda{
+  border-style: solid;
+  border-color: #F5B7B1;
+  width: 200px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: left;
+}
+
+.labelagenda{
+  font-family: Arial;
+  text-align: left;
+}
+
+.tableagenda_consulta{
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: #F5B7B1;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.inputagenda_consulta{
+  border-style: solid;
+  border-color: #F5B7B1;
+  width: 408px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: center;
+}
+
+.labelagenda_consulta{
+  font-family: Arial;
+}
+
+.consulta_agenda{
+  display:inline-block;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #F5B7B1;
+}
+
+.table_agendalista{
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  padding-top: 10px;
+}
+
+.agenda_th,.agendatd{
+  padding: 20px;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.agenda_th{
+  background-color: #F5B7B1;
+  border-bottom: solid 5px;
+  color: white;
+}
+
+.agenda_tr:nth-child(even){
+  background-color: #ddd;
+}
+
+.agenda_tr:hover{
+  background-color: #F5B7B1;
+  color: white;
+}
+
+.tableagenda_modificar{
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: #F5B7B1;
+  padding-top: 30px;
+  margin-bottom: -5%;
+  padding-bottom: 5%;
+}
+
+.labelagenda_m{
+  font-family: Arial;
+  text-align: left;
+}
+
+.labelagenda_m1{
+  font-family: Arial;
+  text-align: left;
+}
+
+.labelagenda_m2{
+  font-family: Arial;
+  text-align: left;
+}
+
+.inputagenda_m{
+  border-style: solid;
+  border-color: #F5B7B1;
+  width: 200px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: left;
+}
+
+.inputagenda_m1{
+  border-color: #F5B7B1;
+  width: 200px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: left;
+}
+
+.inputagenda_m2{
+  border-style: solid;
+  border-color: #F5B7B1;
+  width: 200px; 
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px; 
+  text-align: left;
+}
+
+
+.contenedor-inputs_m1{
+  display: inline-block;
+  text-align: left;
+}
+
+.contenedor-inputs_m2{
+  display: inline-block;
+  text-align: left;
+}
+
+.botones{
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.botones:hover {background-color: #F5B7B1;}
+
+.botones_contacto{
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    color: black;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.botones_contacto:hover {background-color: #F5B7B1;}
+
+.btn-abrir-popup{
+  border-style: solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    color: black;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-abrir-popup_1{
+  border-style: solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    color: black;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-abrir-popup_2{
+  border-style: solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    color: black;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-abrir-popup:hover {background-color: #F5B7B1;}
+.btn-abrir-popup_1:hover {background-color: #F5B7B1;}
+.btn-abrir-popup_2:hover {background-color: #F5B7B1;}
+
+.btn-login{
+  border-style: solid;
+    border-radius: 5px;
+    border-color: #ccc;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-login:hover {background-color: #F5B7B1;}
+
+.footer{
+  background-color: white;
+}
