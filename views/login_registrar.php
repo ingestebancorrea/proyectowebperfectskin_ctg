@@ -8,7 +8,7 @@ require_once("../controlador/login_registrar_controlador.php");/*Incluir archivo
         <meta charset="utf-8">
         <link href="estilos.css" type="text/css" rel="stylesheet">
     </head>
-    <body background="/ProyectoWeb_PSCTG/imagenes/login.png" id="login">
+    <body background="/ProyectoWeb_PSCTG/imagenes/Fondo.jpg" id="login">
         <table id="header">
             <tr>
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://m.facebook.com/perfectskin_ctg-112652640494465/?_rdr" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/facebook.png"></a></td>

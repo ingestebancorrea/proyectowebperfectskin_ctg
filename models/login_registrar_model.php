@@ -6,7 +6,7 @@ class Login {
     /*Crea conexión a DB*/
     public function __construct() {
         $this->login = array();
-        $this->db = new PDO('mysql:host=localhost;dbname=perfectskinweb_ctg', "root", "");
+        $this->db = new PDO('mysql:host=localhost:3306;dbname=lauranuñezpsctg_db; charset=utf8mb4', "root", "");
     }
 
     private function setNames() {

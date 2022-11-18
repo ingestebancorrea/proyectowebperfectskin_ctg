@@ -1,5 +1,5 @@
 <?php 
-require_once("controlador/cliente_controlador.php");/*Incluir archivo php en otro require_once*/
+require_once("controlador/usuario_controlador.php");/*Incluir archivo php en otro require_once*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ require_once("controlador/cliente_controlador.php");/*Incluir archivo php en otr
         <tr>
         <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://m.facebook.com/perfectskin_ctg-112652640494465/?_rdr" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/facebook.png"></a></td>
         <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://www.instagram.com/perfectskin_ctg/" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/instagram.png"></a></td>
-        <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="cliente.php">Registrarse</a></td>
+        <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="usuario.php">Registrarse</a></td>
         <td style="width: 5%;color:white">|</td>
         <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/views/login_ingreso.php">Ingresar</a></td>
         </tr>
@@ -29,7 +29,7 @@ require_once("controlador/cliente_controlador.php");/*Incluir archivo php en otr
                 <li><a href="/ProyectoWeb_PSCTG/views/servicios.php">Servicios</a>
                     <ul>
                         <!--Encabezado Secundario-->
-                        <li><a href="/ProyectoWeb_PSCTG/views/agenda.php">Agenda</a></li>
+                        <li><a href="/ProyectoWeb_PSCTG/views/cita.php">Citas</a></li>
                     </ul>
                  </li>
                  <li><a href="/ProyectoWeb_PSCTG/views/acerca.html">Acerca de</a>
@@ -54,8 +54,12 @@ require_once("controlador/cliente_controlador.php");/*Incluir archivo php en otr
     </div>
 
     <div class="tablecliente" id="tablecliente">
-        <h1 style="font-family: Arial">Registro Cliente</h1>
+        <h1 style="font-family: Arial">Registro Usuario</h1>
         <form action="#" method="POST">
+            <br><label class="labelcliente" for="username">Username</label>
+            <br><input class="inputcliente" type="text" name="username"><br>
+            <br><label class="labelcliente" for="password">Password</label>
+            <br><input class="inputcliente" type="password" name="password"><br>
             <br><label class="labelcliente" for="nombre">Nombre</label>
             <br><input class="inputcliente" type="text" name="nombre"><br>
             <br><label class="labelcliente" for="apellidos">Apellidos</label>
@@ -63,22 +67,28 @@ require_once("controlador/cliente_controlador.php");/*Incluir archivo php en otr
             <br><label class="labelcliente" for="t_identificacion">Tipo de identificación</label>
             <br><select class="inputcliente"  name="t_identificacion">
                 <option>Seleccione...</option>
-                <option>CC</option>
-                <option>TI</option>
+                <option>Cedula Ciudadania</option>
+                <option>Tarjeta Identidad</option>
                 <option>Pasaporte</option>
             </select><br>
             <br><label class="labelcliente" for="nro_identificacion">Nro Identificación</label>
             <br><input class="inputcliente"  type="number" name="nro_identificacion"><br>
-            <br><label class="labelcliente" for="direccion">Dirección</label>
-            <br><input  class="inputcliente"  type="text" name="direccion"><br>
             <br><label class="labelcliente" for="email">Email</label>
             <br><input class="inputcliente" type="text" name="email"><br>
+            <br><label class="labelcliente" for="direccion">Dirección</label>
+            <br><input  class="inputcliente"  type="text" name="direccion"><br>
+            <br><label class="labelcliente" for="t_usuario">Tipo de usuario</label>
+            <br><select class="inputcliente"  name="t_usuario">
+                <option>Seleccione...</option>
+                <option>Cliente</option>
+                <option>Esteticista</option>
+            </select><br>
             <br><button class="botones" type="submit" name="registrar">Registrar</button>
         </form>
     </div>
 
     <div class="tablecliente_modificar" id="tablecliente_modificar">
-        <h1 style="font-family: Arial">Actualización Cliente</h1>
+        <h1 style="font-family: Arial">Actualización Usuario</h1>
         <form action="#" method="POST">
             <br><label class="labelcliente" for="nro_identificacion_m">Nro Identificación</label>
             <br><input class="inputcliente"  type="number" name="nro_identificacion_m"><br>

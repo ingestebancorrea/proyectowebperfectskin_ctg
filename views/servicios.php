@@ -1,5 +1,6 @@
 <?php
-require_once("../controlador/agenda_controlador.php");/*Incluir archivo php en otro require_once*/
+require_once("../controlador/cita_controlador.php");/*Incluir archivo php en otro require_once*/
+require_once("../controlador/reserva_controlador.php");/*Incluir archivo php en otro require_once*/
 ?>
 <html>
 <head>
@@ -14,7 +15,7 @@ require_once("../controlador/agenda_controlador.php");/*Incluir archivo php en o
         <tr>
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://m.facebook.com/perfectskin_ctg-112652640494465/?_rdr" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/facebook.png"></a></td>      
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://www.instagram.com/perfectskin_ctg/" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/instagram.png"></a></td>      
-            <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/cliente.php">Registrarse</a></td>
+            <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/usuario.php">Registrarse</a></td>
             <td style="width: 5%;color:white;height: 5px">|</td>
             <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/views/login_ingreso.php">Ingresar</a></td>         
         </tr>
@@ -30,7 +31,7 @@ require_once("../controlador/agenda_controlador.php");/*Incluir archivo php en o
             <li><a href="servicios.php">Servicios</a>
                 <ul>
                     <!--Encabezado Secundario-->
-                    <li><a href="agenda.php">Agenda</a></li>
+                    <li><a href="cita.php">Citas</a></li>
                 </ul>
             </li>
             <li><a href="acerca.html">Acerca de</a>
@@ -132,6 +133,14 @@ require_once("../controlador/agenda_controlador.php");/*Incluir archivo php en o
                 <div class="contenedor-inputs_s">
                     <br><label class="label_s" for="fecha">Fecha: </label><br>
                     <input class="input_s" name="fecha" type="date"><br>
+                    <br><label class="label_s" for="lugar">Lugar:</label><br>
+                    <select class="input_s" name="lugarservicio" class="inputagenda">
+                        <option>Seleccione...</option>
+                        <option>Domicilio</option>
+                        <option>Establecimiento</option>
+                    </select>
+                </div>
+                <div class="contenedor-inputs_s1">
                     <br><label class="label_s" for="hora">Hora:</label><br>
                     <select class="input_s" name="hora" class="inputagenda">
                         <option>Seleccione...</option>
@@ -143,25 +152,8 @@ require_once("../controlador/agenda_controlador.php");/*Incluir archivo php en o
                         <option>3:00 - 4:00 PM</option>
                         <option>4:00 - 5:00 PM</option>
                     </select><br>
-                    <br><label class="label_s" for="lugar">Lugar:</label><br>
-                    <select class="input_s" name="lugarservicio" class="inputagenda">
-                        <option>Seleccione...</option>
-                        <option>Domicilio</option>
-                        <option>Establecimiento</option>
-                    </select>
-                </div>
-                <div class="contenedor-inputs_s1">
                     <br><label class="label_s1" for="cliente">Cliente: </label><br>
                     <input class="input_s1" name="cliente" type="text"><br>
-                    <br><label class="label_s1" for="empleado">Empleado: </label><br>
-                    <input class="input_s1" name="empleado" type="text"><br>
-                    <br><label class="label_s1" for="t_servicio" >Servicio: </label><br>
-                    <select class="input_s1" name="t_servicio" class="inputagenda">
-                        <option>Seleccione...</option>
-                        <option>Limpieza Facial</option>
-                        <option>Luminous Face</option>
-                        <option>Masaje Relajante</option>
-                    </select><br>
                 </div>
                 <br><br><input type="submit" class="btn-submit" value="Enviar">
                 <input type="reset" class="btn-submit" value="Limpiar">

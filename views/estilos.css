@@ -737,6 +737,25 @@ ul.slider{
   text-align: left;
 }
 
+.btnfiltar{
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #ccc;
+  color: black;
+  height: 5%;
+  width: 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btnfiltar:hover{background-color: #ff1904; color: #f8f8f8;}
+
 .botones{
     border-style: solid;
     border-radius: 5px;

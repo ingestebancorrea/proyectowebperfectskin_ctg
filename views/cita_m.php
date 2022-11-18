@@ -1,5 +1,5 @@
 <?php
-require_once("../controlador/agenda_controlador_listar.php");
+require_once("../controlador/cita_controlador.php");/*Incluir archivo php en otro require_once*/
 ?>
 <html>
     <head>
@@ -13,7 +13,7 @@ require_once("../controlador/agenda_controlador_listar.php");
             <tr>
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://m.facebook.com/perfectskin_ctg-112652640494465/?_rdr" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/facebook.png"></a></td>
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://www.instagram.com/perfectskin_ctg/" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/instagram.png"></a></td>
-            <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/cliente.php">Registrarse</a></td>
+            <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/usuario.php">Registrarse</a></td>
             <td style="width: 5%;color:white;height: 5px">|</td>
             <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/views/login_ingreso.php">Ingresar</a></td>
             </tr>
@@ -29,7 +29,7 @@ require_once("../controlador/agenda_controlador_listar.php");
                     <li><a href="servicios.php">Servicios</a>
                         <ul>
                             <!--Encabezado Secundario-->
-                            <li><a href="agenda.php">Agenda</a></li>
+                            <li><a href="cita.php">Citas</a></li>
                         </ul>
                      </li>
                      <li><a href="acerca.html">Acerca de</a>
@@ -49,33 +49,42 @@ require_once("../controlador/agenda_controlador_listar.php");
 
         <div class="datatable">
         <h1>Data Table</h1>
-        <br><a href="#tableagenda_consulta"><img src="/ProyectoWeb_PSCTG/imagenes/buscar.png"></a>
-        <a href="../views/agenda_m.php"><img src="/ProyectoWeb_PSCTG/imagenes/girar.png"></a>
+        <br><a href="../views/cita.php"><img src="/ProyectoWeb_PSCTG/imagenes/buscar.png"></a>
+        <a href="#tableagenda_modificar"><img src="/ProyectoWeb_PSCTG/imagenes/girar.png"></a>
         </div>
 
-        <div class="tableagenda_consulta" id="tableagenda_consulta">
-        <h1 style="font-family: Arial">Lista Cita</h1>
-        <br>
+        <div class="tableagenda_modificar" id="tableagenda_modificar">
+        <h1 style="font-family: Arial">Actualización Cita</h1>
+        <form action="#" method="POST">
+                <div class="contenedor-inputs_m1">
+                    <br><label class="labelagenda_m" for="codigo">Código cita: </label>
+                    <br><input class="inputagenda_m" name="codigo" type="text" placeholder="codigo"><br>
+                    <br><label class="labelagenda_m1" for="fecha_m">Fecha: </label><br>
+                    <input class="inputagenda_m1" name="fecha_m" type="date"><br>
+                    <br><label class="labelagenda_m1" for="hora_m">Hora:</label>
+                    <br><select  name="hora_m" class="inputagenda_m1">
+                        <option>Seleccione...</option>
+                        <option>8:00 - 9:00 AM</option>
+                        <option>9:00 - 10:00 AM</option>
+                        <option>10:00 - 11:00 AM</option>
+                        <option>11:00 - 12:00 AM</option>
+                        <option>2:00 - 3:00 PM</option>
+                        <option>3:00 - 4:00 PM</option>
+                        <option>4:00 - 5:00 PM</option>
+                    </select><br>
+                    <br><label class="labelagenda_m1" for="lugar_m">Lugar:</label><br>
+                    <select  name="lugar_m" class="inputagenda_m1">
+                        <option>Seleccione...</option>
+                        <option>Domicilio</option>
+                        <option>Establecimiento</option>
+                    </select>
+                </div>
+                <div class="contenedor-inputs_m2">
+                    
+                </div>
+                <br><br><input class="botones" type="submit" class="btn-submit" value="Modificar">
+            </form>
         </div>
-
-        <table class="table_agendalista">
-        <th class="agenda_th">Fecha</th><th class="agenda_th">Hora</th><th class="agenda_th">Lugar</th></th><th class="agenda_th">Cliente</th><th class="agenda_th">Empleado</th><th class="agenda_th">Servicio</th><th class="agenda_th">Estado</th>
-                    <?php
-                    for ($i = 0; $i < count($datos); $i++) {
-                        ?>
-                        <tr class="agenda_tr">
-                            <td class="agenda_td"><?php echo $datos[$i]["fecha"]; ?></td>
-                            <td class="agenda_td"><?php echo $datos[$i]["hora"]; ?></td>
-                            <td class="agenda_td"><?php echo $datos[$i]["lugar_servicio"]; ?></td>
-                            <td class="agenda_td"><?php echo $datos[$i]["cliente"]; ?></td>
-                            <td class="agenda_td"><?php echo $datos[$i]["empleado"]; ?></td>
-                            <td class="agenda_td"><?php echo $datos[$i]["servicio"]; ?></td>
-                            <td class="agenda_td"><?php echo $datos[$i]["estado"]; ?></td>
-                        </tr>
-                        <?php
-                    }
-                    ?>
-        </table>
 
         <div class="caja-fija">
             <a href="https://wa.me/message/RTRPR4CP4ISWF1" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/whatsapp.png" alt=""></a>

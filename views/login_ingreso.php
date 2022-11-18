@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <link href="estilos.css" type="text/css" rel="stylesheet">
     </head>
-    <body background="/ProyectoWeb_PSCTG/imagenes/login.png" id="login">
+    <body background="/ProyectoWeb_PSCTG/imagenes/Fondo.jpg" id="login">
         <table id="header">
             <tr>
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://m.facebook.com/perfectskin_ctg-112652640494465/?_rdr" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/facebook.png"></a></td>
             <td style="width: 2%;text-align: center;"><a style="text-decoration: none;color: white; font-size: 18px" href="https://www.instagram.com/perfectskin_ctg/" target="_blank"><img src="/ProyectoWeb_PSCTG/imagenes/instagram.png"></a></td>
-            <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/cliente.php">Registrarse</a></td>
+            <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="/ProyectoWeb_PSCTG/usuario.php">Registrarse</a></td>
             <td style="width: 5%;color:white;height: 5px">|</td>
             <td style="width: 96%;text-align: right;"><a style="text-decoration: none;color: white; font-size: 18px;font-family: Arial;" href="login.html">Ingresar</a></td>
             </tr>
